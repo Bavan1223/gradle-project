@@ -1,0 +1,28 @@
+plugins { 
+id 'application' 
+} 
+application { 
+mainClass = 'com.yit.AdditionOperation' 
+} 
+repositories { 
+mavenCentral() 
+} 
+dependencies { 
+testImplementation 'junit:junit:4.13.2' 
+
+    implementation 'com.google.guava:guava:32.1.3-jre'
+}
+
+application {
+    mainClass = 'com.yit.AdditionOperation'
+} 
+test { 
+outputs.upToDateWhen { false } 
+testLogging { 
+events "passed", "failed", "skipped" 
+exceptionFormat "full" 
+showStandardStreams = true 
+} 
+} 
+
+
